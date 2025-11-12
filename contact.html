@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Browse a wide range of natural health products by category. Find remedies for skin issues, digestive problems, immunity support, and more.">
+  <meta name="keywords"
+    content="natural remedies, health products, skin care, digestive health, herbal medicine, immune support, wellness, eye disorders, teeth problems, bone and joint issues, female health, male health, obesity, circulatory system, nerve system, urinary system, malnutrition, detox">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.jpeg" alt="Logo" />
+    </div>
+    <div class="header-title">
+      <h1>Contact Us</h1>
+    </div>
+    <div class="home-button">
+      <a href="index.html">Home</a>
+    </div>
+  </header>
+
+  <main class="contact-container">
+    <p class="intro">
+      If you can’t find what you’re looking for, contact us because we might just have it!
+    </p>
+
+    <form id="contactForm" onsubmit="return sendWhatsAppMessage();">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <select id="product" required>
+        <option value="" disabled selected>Select a Product Category</option>
+        <option>Skin Disorders</option>
+        <option>Eye Disorders</option>
+        <option>Respiratory System</option>
+        <option>Bone and Joint</option>
+        <option>Detox</option>
+        <option>Male Health</option>
+        <option>Female Health</option>
+        <option>Teeth Problems</option>
+        <option>Obesity</option>
+        <option>Nerve System</option>
+        <option>Malnutrition</option>
+        <option>Circulatory System</option>
+        <option>Immune System</option>
+        <option>Digestive System</option>
+        <option>Urinary System</option>
+        <option>Cancers</option>
+      </select>
+
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </main>
+
+  <footer class="whatsapp-button">
+    <a href="https://wa.me/263774110646" target="_blank">
+      <img src="images/whatsapp-icon.png" alt="WhatsApp" />
+      Chat Directly on WhatsApp
+    </a>
+  </footer>
+
+  <script>
+    function sendWhatsAppMessage() {
+      const name = document.getElementById('name').value;
+      const product = document.getElementById('product').value;
+      const message = document.getElementById('message').value;
+
+      const text = `Hello! I'm ${name} and I'm interested in ${product}. Here's my message:\n${message}`;
+      const encodedText = encodeURIComponent(text);
+      const phone = '263774110646'; // Replace with your WhatsApp number
+      const url = `https://wa.me/${phone}?text=${encodedText}`;
+      window.open(url, '_blank');
+      return false; // Prevent default form submission
+    }
+  </script>
+</body>
+
+</html>

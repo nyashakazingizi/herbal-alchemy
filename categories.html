@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse a wide range of natural health products by category. Find remedies for skin issues, digestive problems, immunity support, and more.">
+    <meta name="keywords"
+        content="natural remedies, health products, skin care, digestive health, herbal medicine, immune support, wellness, eye disorders, teeth problems, bone and joint issues, female health, male health, obesity, circulatory system, nerve system, urinary system, malnutrition, detox">
+    <meta property="og:title" content="Herbal Alchemy home page">
+    <meta property="og:description"
+        content="Explore categories like skin, digestive, immunity and more. Find the right product for your health need.">
+    <meta property="og:image" content="images/logo.jpeg">
+    <meta property="og:url" content="https://yourwebsite.com/products.html">
+    <meta property="og:type" content="website">
+    <title>Products Categories</title>
+    <link rel="stylesheet" href="categooriesStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container header-grid">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpeg" alt="Logo" />
+            </a>
+        </div>
+        <div class="home-button duplicate">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="categories-heading">
+            <h1>Products Categories</h1>
+        </div>
+        <div class="home-button original">
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+
+    <div class="categories-heading2">
+        <h1>Products Categories</h1>
+    </div>
+
+    <!-- Add this inside your body where the search-section was -->
+    <div class="search-toggle">
+        <i class="fas fa-search" onclick="toggleSearch()" style="font-size: 24px; cursor: pointer;"></i>
+    </div>
+
+    <div class="search-section" id="search-bar" style="display: none;">
+        <input type="text" id="search" placeholder="Search by symptom (e.g. diarrhea, headache, etc.)">
+        <button class="search-btn" onclick="searchProducts()">Search</button>
+    </div>
+
+
+    <div class="symptom-guide">
+        <h3>Not Sure What You Need?</h3>
+        <p>Click a symptom to find related products:</p>
+        <div class="tags">
+            <button class="sug-btn" onclick="highlightCategory('hypertension')">Hypertension</button>
+            <button class="sug-btn" onclick="highlightCategory('erectile')">Erectile Dysfunction</button>
+            <button class="sug-btn" onclick="highlightCategory('female', 'male')">Infertility</button>
+        </div>
+    </div>
+
+    <div class="insideBox">
+        <div class="categories" id="category-list">
+            <div class="cat" data-tags="skin,pimples,acne, eczema, rashes">
+                <div class="cat-img">
+                    <a href="skin.html">
+                        <img src="images/skin.jpg" alt="Skin Disorders" width="100%">
+                    </a>
+                </div>
+                <div class="cat-title">
+                    <h6>Skin Disorders</h6>
+                    <p>e.g. pimples, rashes, eczema</p>
+                </div>
+            </div>
+            <div class="cat"
+                data-tags="digestive,diarrhea,stomach,constipation, gall stone, indigestion, fatty liver diseases, hepatitis b & c, liver cancer, gastro-esophageal reflux diseases, stomach ulcers, ulcers, hemorrhoids, piles, diabetes, alcoholism">
+                <div class="cat-img">
+                    <a href="digestive.html">
+                        <img src="images/digestive.png" alt="Digestive System" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Digestive System</h6>
+                    <p>e.g. stomach ulcers, liver cancer</p>
+                </div>
+            </div>
+            <div class="cat" data-tags="immune,immunity, HIV, AIDS, cold sore, sore, lupus, multiple sclerosis">
+                <div class="cat-img">
+                    <a href="immune.html">
+                        <img src="images/immune.jpg" alt="Immune System" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Immune System</h6>
+                    <p>e.g. allergies, HIV, AIDS</p>
+                </div>
+            </div>
+            <div class="cat" data-tags="eye, short sightedness">
+                <div class="cat-img">
+                    <a href="eye.html">
+                        <img src="images/eyes.jpg" alt="Eye disorders" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title ct11 ct12">
+                    <h6>Eye Disorders</h6>
+                </div>
+            </div>
+            <div class="cat"
+                data-tags="flu, common cold, asthma, cough, lung cancer, bronchitis, pneumonia, tubercolosis, respiratory">
+                <div class="cat-img">
+                    <a href="respiratory.html">
+                        <img src="images/respiratory.png" alt="respiratory systems" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Respiratory System</h6>
+                    <p>e.g flu, asthma, tubercolosis </p>
+                </div>
+            </div>
+            <div class="cat" data-tags="arthritis, gout, osteoporosis">
+                <div class="cat-img">
+                    <a href="bonejoint.html">
+                        <img src="images/joints.png" alt="Bone and Joint issues" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Bone & Joint</h6>
+                    <p>e.g arthritis, gout, osteoporosis </p>
+                </div>
+            </div>
+            <div class="cat" data-tags="aging, premature aging, chronic fatigue syndrome">
+                <div class="cat-img">
+                    <a href="detox.html">
+                        <img src="images/detox.jpg" alt="Detox" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Detox</h6>
+                    <p>e.g premature aging, chronic fatigue</p>
+                </div>
+            </div>
+            <div class="cat"
+                data-tags="vigpower, male, prostate cancer, erectile dysfunction, libido, prostate enlargement">
+                <div class="cat-img">
+                    <a href="male.html">
+                        <img src="images/male-care.png" alt="Male health" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Male Health</h6>
+                    <p>e.g erectile dysfunction, prostate enlargement</p>
+                </div>
+            </div>
+            <div class="cat"
+                data-tags="breast cancer, female, breast lumps, cervical cancer, pregnancy, infertility, fibroids, bacterial vaginosis, libido, menopause">
+                <div class="cat-img">
+                    <a href="female.html">
+                        <img src="images/women-care.jpg" alt="female health" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Female Health</h6>
+                    <p>e.g breast cancer, fibroids, pregnancy</p>
+                </div>
+            </div>
+            <div class="cat" data-tags="tooth decay, bad breath, dental abscess, gum disease">
+                <div class="cat-img">
+                    <a href="teeth.html">
+                        <img src="images/teeth.png" alt="teeth problems" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Teeth Problems</h6>
+                    <p>e.g tooth decay, bad breath, dental abscess</p>
+                </div>
+            </div>
+            <div class="cat" data-tags="obesity">
+                <div class="cat-img">
+                    <a href="obesity.html">
+                        <img src="images/obesity.jpg" alt="obesity" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Obesity</h6>
+                </div>
+            </div>
+            <div class="cat" data-tags="depression, anxiety, dementia, ADHD, insomnia, stroke, parkinson's disease">
+                <div class="cat-img">
+                    <a href="nerve.html">
+                        <img src="images/nerve.png" alt="nerve systems" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Nerve System</h6>
+                    <p>e.g stroke</p>
+                </div>
+            </div>
+            <div class="cat" data-tags="anaemia, malnutrition, defiencies">
+                <div class="cat-img">
+                    <a href="malnutrition.html">
+                        <img src="images/malnutrition.png" alt="malnutrition" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Malnutrition</h6>
+                    <p>e.g Vitamin Deficiency, Anaemia</p>
+                </div>
+            </div>
+            <div class="cat" data-tags="heart attack, angina, hypertension, high cholesterol">
+                <div class="cat-img">
+                    <a href="circulatory.html">
+                        <img src="images/circulatory.png" alt="circulatory system" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Circulatory System</h6>
+                    <p>e.g hypertension, high cholesterol </p>
+                </div>
+            </div>
+            <div class="cat" data-tags="heart attack, angina, hypertension, high cholesterol">
+                <div class="cat-img">
+                    <a href="parasitic.html">
+                        <img src="images/parasitic.png" alt="Parasitic & Viral Infections" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Parasitic & Viral Infections</h6>
+                    <p>e.g Parasitic Diseases</p>
+                </div>
+            </div>
+            <div class="cat" data-tags="kidney stones, chronic kidney disease, urinary tract infection">
+                <div class="cat-img">
+                    <a href="urinary.html">
+                        <img src="images/urinary.png" alt="urinary system" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Urinary System</h6>
+                    <p>e.g kidney disease, urinary tract infection</p>
+                </div>
+            </div>
+            <div class="cat" data-tags="fertilizer">
+                <div class="cat-img">
+                    <a href="fertilizer.html">
+                        <img src="images/fertilizer3.png" alt="fertilizer" height="auto" width="100%">
+                    </a>
+
+                </div>
+                <div class="cat-title">
+                    <h6>Nutriplant Organic Plus Fertilizer</h6>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="whatsapp-button">
+        <a href="https://wa.me/263774110646?text=Hi!%20Can%20you%20help%20me%20find%20a%20product%20for..."
+            target="_blank">
+            <img src="images/whatsapp-icon.png" alt="WhatsApp" />
+            Contact Us on WhatsApp
+        </a>
+    </div>
+
+    <script>
+        function searchProducts(keywords = []) {
+            const items = document.querySelectorAll('.cat');
+            items.forEach(item => {
+                const tags = (item.dataset.tags || '').toLowerCase();
+
+                const matches = keywords.some(keyword => tags.includes(keyword.toLowerCase()));
+                item.style.display = matches ? 'block' : 'none';
+            });
+        }
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+                searchBar.style.display = 'block';
+            } else {
+                searchBar.style.display = 'none';
+            }
+        }
+
+        function highlightCategory(...keywords) {
+            // Optional: Join keywords to display in the search box
+            document.getElementById('search').value = keywords.join(', ');
+            searchProducts(keywords);
+        }
+    </script>
+
+</body>
+
+</html>
